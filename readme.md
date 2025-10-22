@@ -15,7 +15,7 @@ Here are some useful resources for learning more about Project Sylvanas:
 - [Example Documentation](https://docs.project-sylvanas.net/examples)
 
 ## IZI SDK
-Examples in the [IZI directory](izi) leverage the **[IZI SDK](/dev/libraries/izi)** - a high-level toolkit that provides cleaner, more intuitive APIs and powerful utilities. These examples are ideal for:
+Examples in the [IZI directory](izi) leverage the **[IZI SDK](https://docs.project-sylvanas.net/dev/libraries/izi)** - a high-level toolkit that provides cleaner, more intuitive APIs and powerful utilities. These examples are ideal for:
 
 - **Faster development** - Write less boilerplate code and focus on features
 - **Modern best practices** - Use event-driven patterns, helpers, and smart abstractions
