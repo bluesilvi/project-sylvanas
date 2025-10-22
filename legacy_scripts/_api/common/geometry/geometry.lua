@@ -1,0 +1,62 @@
+
+---@class circle_data
+---@field public units_hit number
+---@field public best_unit game_object
+---@field public best_position vec3
+---@field public best_units table<game_object>
+
+---@class circle
+---@field public center vec3
+---@field public radius number
+---@field public create fun(self: circle, center: vec3, radius: number): circle
+---@field public is_inside fun(self: circle, point: vec3, hitbox: number): boolean
+---@field public get_units_inside fun(self: circle, units_list: table<game_object>): table<game_object>
+---@field public get_allies_inside fun(self: circle, units_list_override: table<game_object>?): table<game_object>
+---@field public get_enemies_inside fun(self: circle, units_list_override: table<game_object>?): table<game_object>
+---@field public draw fun(self: circle): nil
+---@field public draw_with_counter fun(self: circle, units_hit_count: number?): nil
+---@field public get_optimal_hit_position fun(self: circle, search_center: vec3, search_radius: number, max_range: number, include_enemies: boolean, include_allies: boolean): circle_data
+
+---@class rectangle
+---@field public corner1 vec3
+---@field public corner2 vec3
+---@field public corner3 vec3
+---@field public corner4 vec3
+---@field public width number
+---@field public length number
+---@field public origin vec3
+---@field public destination vec3
+---@field public create fun(self: rectangle, origin: vec3, destination: vec3, width: number, length: number?): rectangle
+---@field public create_direction fun(self: rectangle, position: vec3, direction: vec3, width: number, length: number): rectangle
+---@field public is_inside fun(self: rectangle, point: vec3, hitbox: number): boolean
+---@field public get_units_inside fun(self: rectangle, units_list: table<game_object>): table<game_object>
+---@field public get_allies_inside fun(self: rectangle, units_list_override: table<game_object>?): table<game_object>
+---@field public get_enemies_inside fun(self: rectangle, units_list_override: table<game_object>?): table<game_object>
+---@field public draw fun(self: rectangle): nil
+---@field public draw_with_counter fun(self: rectangle, count: number?): nil
+
+---@class cone
+---@field public center vec3
+---@field public radius number
+---@field public angle_raw number
+---@field public angle number
+---@field public direction vec3
+---@field public path_around_cone table<vec3>
+---@field public right_side_circ_points table<vec3>
+---@field public left_side_circ_points table<vec3>
+---@field public left_line_points table<vec3>
+---@field public right_line_points table<vec3>
+---@field public extra_left_point table<vec3>
+---@field public extra_right_point table<vec3>
+---@field public create fun(self: cone, center: vec3, destination: vec3, radius: number, angle: number): cone
+---Function to create a cone given a position, radius, angle, and direction
+---Note: Direction is obj:direction()
+---@field public create_direction fun(self: cone, center: vec3, direction: vec3, radius: number, angle: number): cone
+---@field public create_unit_frontal fun(self: cone, unit: game_object, radius: number, angle: number): cone
+---@field public get_path fun(self: cone, cone_info: table): nil
+---@field public is_inside fun(self: cone, point_position: vec3, hitbox: number): boolean
+---@field public get_units_inside fun(self: cone, units_list: table<game_object>): table<game_object>
+---@field public get_allies_inside fun(self: cone, units_list_override: table<game_object>?): table<game_object>
+---@field public get_enemies_inside fun(self: cone, units_list_override: table<game_object>?): table<game_object>
+---@field public draw fun(self: cone, color?:color, thickness?:number): nil
+---@field public draw_with_counter fun(self: cone, count: number?): nil

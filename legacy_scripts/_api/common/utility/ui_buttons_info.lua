@@ -1,0 +1,32 @@
+
+-- Example:
+-- ---@type ui_buttons_info
+-- local x = require("common/utility/ui_buttons_info")
+-- x: -> IntelliSense
+-- Warning: Access with ":", not "."
+
+---@class ui_buttons_info
+---@field public launch_checkbox checkbox
+---@field public force_render checkbox
+---@field public are_buttons_empty fun(self: ui_buttons_info): boolean
+---@field public push_button fun(self: ui_buttons_info, button_id: string, title: string, spell_ids: table<integer>, logic_function: function): nil
+---@field public get_button_info fun(self: ui_buttons_info, button_id: string): table | nil
+---@field public get_current_buttons_infos fun(self: ui_buttons_info): table
+---@field public is_logic_attempting_only_once fun(self: ui_buttons_info): boolean
+---@field public get_timeout_time fun(self: ui_buttons_info): number
+---@field public set_no_render_timeout_time_slider_flag fun(self: ui_buttons_info, state: boolean): nil
+---@field public is_target_dr_allowed fun(self: ui_buttons_info, target: game_object, cc_type: number, hit_time: number): nil
+
+-- Example Usage:
+-- local ui = require("common/utility/ui_buttons_info")
+-- if ui:are_buttons_empty() then
+--     print("No buttons are present")
+-- end
+-- ui:push_button("test_button", "Test Title", {12345}, function() print("Logic executed") end)
+-- local button_info = ui:get_button_info("test_button")
+-- if button_info then
+--     print("Found button:", button_info.title)
+-- end
+-- local timeout = ui:get_timeout_time()
+-- print("Timeout time:", timeout)
+-- ui:set_no_render_timeout_time_slider_flag(true)

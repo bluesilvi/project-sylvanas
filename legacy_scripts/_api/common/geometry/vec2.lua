@@ -1,0 +1,65 @@
+
+-- Example:
+-- ---@type vec2
+-- local v = require("common/geometry/vector_2")
+-- v: -> IntelliSense
+-- Warning: Access with ":", not "."
+
+---@class vec2
+---@field public x number
+---@field public y number
+---@field public z number
+---Creates a new vec2 instance.
+---@field public new fun(x: number, y: number): vec2
+---Clones the vec2 instance.
+---@field public clone fun(self: vec2): vec2
+---Overloads the addition operator for vec2.
+---@field public __add fun(self: vec2, a: vec2): vec2
+---Overloads the subtraction operator for vec2.
+---@field public __sub fun(self: vec2, a: vec2): vec2
+---Overloads the multiplication operator for vec2.
+---@field public __mul fun(self: vec2, a: vec2 | number): vec2
+---Overloads the division operator for vec2.
+---@field public __div fun(self: vec2, a: vec2 | number): vec2
+---Checks equality between two vec2 instances.
+---@field public __eq fun(self: vec2, a: vec2): boolean
+---Normalizes the vec2 instance.
+---@field public normalize fun(self: vec2): vec2
+---Gets the length of the vec2 instance.
+---@field public length fun(self: vec2): number
+---Gets the squared length of the vec2 instance.
+---@field public length_squared fun(self: vec2): number
+---Calculates the dot product between two vec2 instances.
+---@field public dot fun(self: vec2, v: vec2): number
+---Performs linear interpolation between two vec2 instances.
+---@field public lerp fun(self: vec2, target: vec2, alpha: number): vec2
+---Randomizes the x and y components within a margin.
+---@field public randomize_xy fun(self: vec2, margin: number): nil
+---Checks if the vec2 instance is NaN.
+---@field public is_nan fun(self: vec2): boolean
+---Checks if the vec2 instance is zero.
+---@field public is_zero fun(self: vec2): boolean
+---Gets the unit vector of the vec2 instance.
+---@field public get_unit_vector fun(self: vec2): vec2
+---Extends the vec2 instance towards a target by a certain number of units.
+---@field public get_extended fun(self: vec2, target: vec2, units: number): vec2
+---Calculates the distance to another vec2 instance.
+---@field public dist_to fun(self: vec2, other: vec2): number
+---Calculates the squared distance to another vec2 instance.
+---@field public squared_dist_to fun(self: vec2, other: vec2): number
+---Rotates the vec2 instance around a point by a certain number of degrees.
+---@field public rotate_around fun(self: vec2, origin: vec2, degrees: number): vec2
+---Calculates the dot product between two vec2 instances.
+---@field public dot_product fun(v1: vec2, v2: vec2): number
+---Gets the angle between two vec2 instances with respect to an origin.
+---@field public get_angle fun(self: vec2, target: vec2, origin: vec2): number
+---Checks if a point intersects with a segment.
+---@field public intersects fun(self: vec2, segment_end: vec2, point: vec2, margin: number, radius: number, denominator: number): boolean
+---Gets the left perpendicular vector of the vec2 instance with respect to an origin.
+---@field public get_perp_left fun(self: vec2, origin: vec2): vec2
+---Gets the left perpendicular vector of the vec2 instance with a factor applied.
+---@field public get_perp_left_factor fun(self: vec2, origin: vec2, factor: number): vec2
+---Gets the right perpendicular vector of the vec2 instance with respect to an origin.
+---@field public get_perp_right fun(self: vec2, origin: vec2): vec2
+---Gets the right perpendicular vector of the vec2 instance with a factor applied.
+---@field public get_perp_right_factor fun(self: vec2, origin: vec2, factor: number): vec2

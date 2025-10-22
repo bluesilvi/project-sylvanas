@@ -1,0 +1,66 @@
+
+-- Example:
+-- ---@type color
+-- local c = require("common/color")
+-- c: -> IntelliSense
+-- Warning: Access with ":", not "."
+
+---@class color
+---Creates a new color instance.
+---@field public new fun(r: number, g: number, b: number, a?: number): color
+---Clones the color instance.
+---@field public clone fun(self: color): color
+---Blends the color instance with another color.
+---@field public blend fun(self: color, other: color, alpha: number): color
+---Sets the color instance's values.
+---@field public set fun(self: color, r: number, g: number, b: number, a?: number): color
+---Gets the color instance's values.
+---@field public get fun(self: color): (number, number, number, number)
+---Clamps the color instance's values to the range [0, 255].
+---@field public clamp fun(self: color): color
+
+---@class color
+---Creates a red color.
+---@field public red fun(alpha?: number): color
+---Creates a green color.
+---@field public green fun(alpha?: number): color
+---Creates a blue color.
+---@field public blue fun(alpha?: number): color
+---Creates a white color.
+---@field public white fun(alpha?: number): color
+---Creates a black color.
+---@field public black fun(alpha?: number): color
+---Creates a yellow color.
+---@field public yellow fun(alpha?: number): color
+---Creates a pink color.
+---@field public pink fun(alpha?: number): color
+---Creates a purple color.
+---@field public purple fun(alpha?: number): color
+---Creates a gray color.
+---@field public gray fun(alpha?: number): color
+---Creates a brown color.
+---@field public brown fun(alpha?: number): color
+---Creates a gold color.
+---@field public gold fun(alpha?: number): color
+---Creates a silver color.
+---@field public silver fun(alpha?: number): color
+---Creates an orange color.
+---@field public orange fun(alpha?: number): color
+---Creates a cyan color.
+---@field public cyan fun(alpha?: number): color
+---Creates a pale red color.
+---@field public red_pale fun(alpha?: number): color
+---Creates a pale green color.
+---@field public green_pale fun(alpha?: number): color
+---Creates a pale blue color.
+---@field public blue_pale fun(alpha?: number): color
+---Creates a pale cyan color.
+---@field public cyan_pale fun(alpha?: number): color
+---Creates a pale gray color.
+---@field public gray_pale fun(alpha?: number): color
+
+---@class color
+---Converts HSV values to a color.
+---@field public hsv_to_rgb fun(h: number, s: number, v: number): color
+---Gets a rainbow color based on the current time.
+---@field public get_rainbow_color fun(ratio: number): color

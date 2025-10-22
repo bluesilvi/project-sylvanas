@@ -1,0 +1,81 @@
+
+-- Example:
+-- ---@type vec3
+-- local v = require("common/geometry/vector_3")
+-- v: -> IntelliSense
+-- Warning: Access with ":", not "."
+
+---@class vec3
+---@field public x number
+---@field public y number
+---@field public z number
+---Creates a new vec3 instance.
+---@field public new fun(x: number, y: number, z: number): vec3
+---Clones the vec3 instance.
+---@field public clone fun(self: vec3): vec3
+---Overloads the addition operator for vec3.
+---@field public __add fun(self: vec3, a: vec3): vec3
+---Overloads the subtraction operator for vec3.
+---@field public __sub fun(self: vec3, a: vec3): vec3
+---Overloads the multiplication operator for vec3.
+---@field public __mul fun(self: vec3, a: vec3 | number): vec3
+---Overloads the division operator for vec3.
+---@field public __div fun(self: vec3, a: vec3 | number): vec3
+---Checks equality between two vec3 instances.
+---@field public __eq fun(self: vec3, a: vec3): boolean
+---Normalizes the vec3 instance.
+---@field public normalize fun(self: vec3): vec3
+---Gets the length of the vec3 instance.
+---@field public length fun(self: vec3): number
+---Gets the squared length of the vec3 instance.
+---@field public length_squared fun(self: vec3): number
+---Calculates the dot product between two vec3 instances.
+---@field public dot fun(self: vec3, v: vec3): number
+---Calculates the cross product between two vec3 instances.
+---@field public cross fun(self: vec3, v: vec3): vec3
+---Checks if the vec3 instance is NaN.
+---@field public is_nan fun(self: vec3): boolean
+---Checks if the vec3 instance is zero.
+---@field public is_zero fun(self: vec3): boolean
+---Performs linear interpolation between two vec3 instances.
+---@field public lerp fun(self: vec3, target: vec3, alpha: number): vec3
+---Gets the unit vector of the vec3 instance.
+---@field public get_unit_vector fun(self: vec3): vec3
+---Extends the vec3 instance towards a target by a certain number of units.
+---@field public get_extended fun(self: vec3, target: vec3, units: number): vec3
+---Calculates the distance to another vec3 instance.
+---@field public dist_to fun(self: vec3, other: vec3): number
+---Calculates the squared distance to another vec3 instance.
+---@field public squared_dist_to fun(self: vec3, other: vec3): number
+---Calculates the distance to another vec3 instance, ignoring the z-coordinate.
+---@field public dist_to_ignore_z fun(self: vec3, other: vec3): number
+---Calculates the squared distance to another vec3 instance, ignoring the z-coordinate.
+---@field public squared_dist_to_ignore_z fun(self: vec3, other: vec3): number
+---Projects the vec3 instance onto a 2D plane.
+---@field public project_2d fun(self: vec3): vec3
+---Rotates the vec3 instance around a point by a certain number of degrees.
+---@field public rotate_around fun(self: vec3, origin: vec3, degrees: number): vec3
+---Rotates the vec3 instance around the z-axis by a certain number of radians.
+---@field public rotate_3d_radians fun(self: vec3, angle_radians: number): vec3
+---Calculates the dot product between two vec3 instances.
+---@field public dot_product fun(v1: vec3, v2: vec3): number
+---Randomizes the x and y components within a margin.
+---@field public randomize_xy fun(self: vec3, margin: number): vec3
+---Calculates the angle between two vec3 instances with respect to an origin.
+---@field public get_angle fun(self: vec3, target: vec3, origin: vec3): number
+---Checks if a point intersects with a line segment.
+---@field public intersects fun(self: vec3, segment_end: vec3, point: vec3, margin: number, radius: number, denominator: number): boolean
+---Gets the left perpendicular vector of the vec3 instance with respect to an origin.
+---@field public get_perp_left fun(self: vec3, origin: vec3): vec3
+---Gets the left perpendicular vector of the vec3 instance with a factor applied.
+---@field public get_perp_left_factor fun(self: vec3, origin: vec3, factor: number): vec3
+---Gets the right perpendicular vector of the vec3 instance with respect to an origin.
+---@field public get_perp_right fun(self: vec3, origin: vec3): vec3
+---Gets the right perpendicular vector of the vec3 instance with a factor applied.
+---@field public get_perp_right_factor fun(self: vec3, origin: vec3, factor: number): vec3
+---Calculates the distance from the vec3 instance to a line segment.
+---@field public dist_to_line_segment fun(self: vec3, point_a: vec3, point_b: vec3): number
+---Calculates the squared distance from the vec3 instance to a line segment.
+---@field public squared_dist_to_line_segment fun(self: vec3, point_a: vec3, point_b: vec3): number
+---Calculates the squared distance from the vec3 instance to a line segment, ignoring the z-coordinate.
+---@field public squared_dist_to_ignore_z_line_segment fun(self: vec3, point_a: vec3, point_b: vec3): number
