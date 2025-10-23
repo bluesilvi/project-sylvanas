@@ -168,7 +168,8 @@ core.register_on_update_callback(function()
                         {
                             --Spell prediction is used by default for ground spells
                             --I am manually setting options to show that you can tweak the default behavior
-                            --IZI should have default prediction options for most AoE spells, however, to get the most of your rotation you should tweak these values to fit your usage
+                            --IZI should have default prediction options for most AoE spells, however,
+                            --to get the most of your class you should tweak these values to fit your usage
                             --Use spell prediction (Default: True)
                             use_prediction  = true,
                             --Spell prediction type
@@ -185,7 +186,7 @@ core.register_on_update_callback(function()
                             --Cast while moving if we have hot streak up
                             skip_moving     = is_flamestrike_instant,
                             --Ensure we have LoS
-                            --(changing to false as at the time of writing this it was not functioning correctly)
+                            --(changing to false as at the time of writing this it was not working)
                             check_los       = false,
                         })
                 then
