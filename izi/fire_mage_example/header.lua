@@ -16,19 +16,30 @@ end
 
 --Import enums for class and spec IDs
 local enums = require("common/enums")
-local player_class = local_player:get_class()              --Get the local player's class
-local is_valid_class = player_class == enums.class_id.MAGE --Are we a mage?
 
-if not is_valid_class then                                 --If we are not a mage then dont load the plugin
+--Get the local player's class
+local player_class = local_player:get_class()
+
+--Are we a mage?
+local is_valid_class = player_class == enums.class_id.MAGE
+
+--If we are not a mage then dont load the plugin
+if not is_valid_class then
     plugin.load = false
     return plugin
 end
 
-local spec_id = enums.class_spec_id                                                                --Get spec ID enum
-local player_spec_id = local_player:get_specialization_id()                                        --Get the local player's spec ID
-local is_valid_spec = player_spec_id == spec_id.get_spec_id_from_enum(spec_id.spec_enum.FIRE_MAGE) --Are we Fire Mage?
+--Get spec ID enum
+local spec_id = enums.class_spec_id
 
-if not is_valid_spec then                                                                          -- If we are not Fire Mage then dont load the plugin
+--Get the local player's spec ID
+local player_spec_id = local_player:get_specialization_id()
+
+--Are we a Fire Mage?
+local is_valid_spec = player_spec_id == spec_id.get_spec_id_from_enum(spec_id.spec_enum.FIRE_MAGE)
+
+-- If we are not Fire Mage then dont load the plugin
+if not is_valid_spec then
     plugin.load = false
     return plugin
 end
